@@ -294,7 +294,7 @@ footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);color:v
     <ol class="steps">
       <li><span>구글에서 <b>AI 업무</b>를 검색합니다.</span></li>
       <li><span>잡코리아 <b>'현직 개발자들이 만든 진짜 AI 업무 자동화 사례'</b> 글을 엽니다.</span></li>
-      <li><span>주소창의 글 주소를 복사해 Gemini에 붙여넣고, 이어서 <b>"위의 글 요약해줘"</b>라고 써서 보냅니다.</span></li>
+      <li><span>Ctrl+A를 누르고, 이어서 <b>"위의 글 요약해줘"</b>라고 써서 보냅니다.</span></li>
     </ol>
   </div>
   <div class="card">
