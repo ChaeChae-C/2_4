@@ -1,5 +1,4 @@
 # 인공지능 업스킬링 4주차 실습 가이드
-<!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
@@ -100,8 +99,6 @@ details.more summary::after{content:'＋';font-weight:800;color:var(--accent)}
 details.more[open] summary{border-bottom:1px solid var(--line)}
 details.more[open] summary::after{content:'－'}
 .more-body{padding:16px 18px 18px}
-.linkbtn{display:flex;align-items:center;justify-content:center;min-height:58px;border-radius:10px;margin:0 0 16px;background:var(--accent);color:#fff;font-weight:800;font-size:1.05em;text-decoration:none;text-align:center;padding:8px 14px}
-.linkbtn:hover{background:var(--accent-deep)}
 .banner{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;background:var(--surface-2);border-radius:var(--radius);padding:16px 20px;margin-top:24px}
 .banner .label{font-weight:800;font-size:.9em;color:var(--accent-deep)}
 .banner .addr{font-family:"Nanum Gothic Coding",monospace;font-weight:700;font-size:1.08em}
@@ -111,11 +108,6 @@ details.more[open] summary::after{content:'－'}
 .tbl tr:last-child td{border-bottom:none}
 .tbl td:first-child{font-weight:800;white-space:nowrap}
 .tbl-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px}
-ul.check{list-style:none;margin:0;padding:0}
-ul.check li{display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--line)}
-ul.check li:last-child{border-bottom:none}
-ul.check input{width:22px;height:22px;margin-top:4px;flex:0 0 auto;accent-color:var(--ok)}
-ul.check label{cursor:pointer}
 .qr-row{display:flex;flex-wrap:wrap;gap:10px}
 .qr-row input{flex:1 1 240px;min-height:52px;padding:12px;border:1px solid var(--line);border-radius:10px;background:var(--ground);color:var(--ink);font-family:inherit;font-size:1em}
 .qr-row button{min-height:52px;padding:0 20px;border:none;border-radius:10px;background:var(--accent);color:#fff;font-family:inherit;font-weight:800;font-size:1em;cursor:pointer}
@@ -125,9 +117,6 @@ footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);color:v
 @media (prefers-reduced-motion: no-preference){
   button.copy,button.chip{transition:background .15s ease,border-color .15s ease}
 }
-.flow{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 18px;padding:0;list-style:none}
-.flow li{padding:6px 12px;border-radius:999px;background:var(--surface-2);color:var(--ink-soft);font-weight:800;font-size:.86em}
-.flow li.on{background:var(--accent);color:#fff}
 .answer{display:flex;gap:11px;background:var(--mark-bg);border:1px solid var(--mark-line);border-radius:10px;padding:13px 15px;font-size:.94em;margin-top:14px}
 .answer b{flex:0 0 auto;font-weight:800;color:var(--mark-ink)}
 .answer p{margin:0;color:var(--ink)}
@@ -142,7 +131,6 @@ footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);color:v
       <a href="#s1">1 AI 환경 세팅</a>
       <a href="#s2">2 요약·번역</a>
       <a href="#s3">3 짧은 글쓰기</a>
-      <a href="#check">✓ 마무리</a>
     </nav>
     <div class="sizer">
       <span>글자</span>
@@ -306,16 +294,8 @@ footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);color:v
     <ol class="steps">
       <li><span>구글에서 <b>AI 업무</b>를 검색합니다.</span></li>
       <li><span>잡코리아 <b>'현직 개발자들이 만든 진짜 AI 업무 자동화 사례'</b> 글을 엽니다.</span></li>
-      <li><span>아래 프롬프트를 붙여넣고 보냅니다.</span></li>
+      <li><span>주소창의 글 주소를 복사해 Gemini에 붙여넣고, 이어서 <b>"위의 글 요약해줘"</b>라고 써서 보냅니다.</span></li>
     </ol>
-    <pre data-copy>https://www.jobkorea.co.kr/recruit/careers/articles/internal-ai-automation-cases
-위의 글 요약해줘</pre>
-    <button class="copy" type="button"><span class="ico">⧉</span>복사하기</button>
-    <span class="mlabel" style="margin-top:16px">더 물어보기</span>
-    <div class="chips">
-      <button class="chip" type="button" data-copy="핵심만 3줄로 다시 요약해줘">핵심만 3줄로 다시 요약해줘<span class="tag">복사</span></button>
-      <button class="chip" type="button" data-copy="표로 정리해줘">표로 정리해줘<span class="tag">복사</span></button>
-    </div>
   </div>
   <div class="card">
     <h3>유튜브 영상 요약하기</h3>
@@ -491,28 +471,6 @@ What is your name? What excites you and makes your heart beat? Tell me your stor
   </details>
 </section>
 
-<!-- ───────────── 마무리 ───────────── -->
-<section id="check">
-  <div class="sec-head"><span class="sec-num">✓</span><h2>마무리</h2></div>
-  <p class="sec-note">다음 시간 미리 보기와 꼭 지킬 것입니다.</p>
-  <div class="card">
-    <h3>다음 시간에는</h3>
-    <ol class="steps">
-      <li><span>긴 글쓰기 / 퇴고하기</span></li>
-      <li><span>데이터 분석하기</span></li>
-      <li><span>문서 만들기</span></li>
-    </ol>
-    <div class="note"><b>다음 수업</b><p><strong>12.05.(토)</strong> · <strong>12.12.(토)</strong> 꼭 기억해 주세요!</p></div>
-  </div>
-  <div class="card">
-    <ul class="check">
-      <li><input type="checkbox" id="c1"><label for="c1">Gemini 요청 사항을 저장했다.</label></li>
-      <li><input type="checkbox" id="c2"><label for="c2">AI 요약에서 중요한 숫자와 결론은 원문에서 다시 확인했다.</label></li>
-      <li><input type="checkbox" id="c3"><label for="c3">만든 인사말이나 카드를 결과물 올리는 곳에 올렸다.</label></li>
-      <li><input type="checkbox" id="c4"><label for="c4">수업이 끝난 뒤 오른쪽 위 내 사진 → '로그아웃'을 눌렀다.</label></li>
-    </ul>
-  </div>
-</section>
 <div class="banner">
   <span class="label">결과물 올리는 곳</span>
   <span class="addr">bit.ly/업스킬링</span>
@@ -535,7 +493,7 @@ What is your name? What excites you and makes your heart beat? Tell me your stor
 <script>
 (function(){
   /* [대괄호] 부분 노란색 표시 (복사되는 문장은 그대로) */
-  var KEEP=['[답변 기본 원칙]','[설명 방식 및 어조]','[실생활 활용 맞춤]','[PDF]'];
+  var KEEP=['[답변 기본 원칙]','[설명 방식 및 어조]','[실생활 활용 맞춤]'];
   document.querySelectorAll('pre[data-copy]').forEach(function(pre){
     var raw = pre.textContent;
     pre.setAttribute('data-copy', raw);
